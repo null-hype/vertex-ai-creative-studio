@@ -1,0 +1,18 @@
+{
+    "install-all": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "mcp-genmedia": {
+                "installAll": true
+            }
+        }
+    },
+    "avtool-only": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "mcp-genmedia": {
+                "installAvtool": true
+            }
+        }
+    }
+}

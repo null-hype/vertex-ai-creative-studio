@@ -1,0 +1,22 @@
+{
+    "name": "Genmedia Creative Studio DevContainer",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {},
+        "ghcr.io/devcontainers/features/go:1": {},
+        "./src/mcp-genmedia": {
+            "installAll": false,
+            "installAvtool": true
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.Go",
+                "ms-python.python",
+                "ms-python.vscode-pylance"
+            ]
+        }
+    },
+    "remoteUser": "vscode"
+}

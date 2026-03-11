@@ -1,0 +1,47 @@
+{
+    "name": "MCP Genmedia Servers",
+    "id": "mcp-genmedia",
+    "version": "1.0.0",
+    "description": "Install MCP Genmedia servers and Gemini CLI for chat-driven media generation and manipulation.",
+    "options": {
+        "installAll": {
+            "type": "boolean",
+            "default": false,
+            "description": "Install all Genmedia MCP servers."
+        },
+        "installAvtool": {
+            "type": "boolean",
+            "default": true,
+            "description": "Install mcp-avtool-go."
+        },
+        "installChirp": {
+            "type": "boolean",
+            "default": false,
+            "description": "Install mcp-chirp3-go."
+        },
+        "installGemini": {
+            "type": "boolean",
+            "default": false,
+            "description": "Install mcp-gemini-go."
+        },
+        "installImagen": {
+            "type": "boolean",
+            "default": false,
+            "description": "Install mcp-imagen-go."
+        },
+        "installLyria": {
+            "type": "boolean",
+            "default": false,
+            "description": "Install mcp-lyria-go."
+        },
+        "installVeo": {
+            "type": "boolean",
+            "default": false,
+            "description": "Install mcp-veo-go."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/node:1",
+        "ghcr.io/devcontainers/features/go:1"
+    ]
+}
