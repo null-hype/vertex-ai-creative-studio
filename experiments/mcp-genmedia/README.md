@@ -77,7 +77,15 @@ This repository provides AI application samples for:
 
 ## Development and Contribution
 
+### DevContainer Setup (Recommended)
+
+To ensure a consistent development environment with all dependencies (Go, Python, GCloud CLI, FFMpeg) pre-installed, we recommend using the provided [DevContainer](../../.devcontainer/devcontainer.json).
+
+When you open this repository in VS Code with the Dev Containers extension, it will prompt you to "Reopen in Container". This will automatically set up the MCP development environment for you.
+
 For those interested in extending the existing servers or creating new ones, the `mcp-genmedia-go` directory contains a more detailed `README.md` with information on the architecture and development process. Please refer to the [mcp-genmedia-go/README.md](./mcp-genmedia-go/README.md) for more information.
+
+*Note: This DevContainer implementation tracks upstream issue [GoogleCloudPlatform#411](https://github.com/GoogleCloudPlatform/vertex-ai-creative-studio/issues/411).*
 
 ## License
 

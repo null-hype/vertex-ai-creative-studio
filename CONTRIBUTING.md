@@ -23,6 +23,10 @@ sign a new one.
 This project follows [Google's Open Source Community
 Guidelines](https://opensource.google/conduct/).
 
+## Development Environment
+
+We recommend using the provided **DevContainer** for a consistent development experience. It comes pre-configured with Python, Go, GCloud CLI, and all necessary media processing tools (`ffmpeg`, etc.). See the [README.md](./README.md#devcontainer-recommended) for setup instructions.
+
 ## Contribution process
 
 ### Code Reviews

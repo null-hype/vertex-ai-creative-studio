@@ -347,7 +347,27 @@ The above diagram depicts the components that make up the Creative Studio soluti
 
 ## Setting up your development environment
 
-### Python virtual environment
+### DevContainer (Recommended)
+
+This project includes a [DevContainer](https://containers.dev/) configuration, which provides a consistent, pre-configured development environment with all necessary dependencies for both the Python web application and the Go MCP servers.
+
+To use the DevContainer:
+1.  Open the repository in **VS Code**.
+2.  Install the **Dev Containers** extension.
+3.  Click the green button in the bottom-left corner and select **"Reopen in Container"**.
+
+The container will automatically install:
+- Python 3.13 and `uv`
+- Go 1.24
+- Google Cloud CLI
+- `ffmpeg` and `ffprobe` (for MCP AVTool)
+- All project dependencies and MCP servers.
+
+### Local Setup
+
+If you prefer not to use DevContainers, you can set up your environment manually:
+
+#### Python virtual environment
 
 A python virtual environment, with required packages installed.
 
