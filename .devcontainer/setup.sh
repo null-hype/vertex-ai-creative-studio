@@ -3,6 +3,9 @@ set -e
 
 echo "Starting setup script..."
 
+# Ensure ~/.local/bin exists
+mkdir -p $HOME/.local/bin
+
 # Install uv
 if ! command -v uv &> /dev/null; then
     echo "Installing uv..."
@@ -25,7 +28,13 @@ go work sync
 
 # Install all MCP servers
 echo "Installing MCP servers..."
-# We use a non-interactive approach for the installer or just run the commands
 go install ./mcp-avtool-go ./mcp-chirp3-go ./mcp-gemini-go ./mcp-imagen-go ./mcp-lyria-go ./mcp-veo-go
+
+# Go back to root
+cd ../../../
+
+# Run Gemini CLI configuration
+echo "Running Gemini CLI configuration..."
+bash .devcontainer/scripts/configure-gemini.sh
 
 echo "Setup complete!"

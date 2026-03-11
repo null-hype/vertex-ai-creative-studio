@@ -1,5 +1,5 @@
 {
-    "name": "Genmedia MCP Development",
+    "name": "Genmedia MCP + Gemini CLI Development",
     "build": {
         "dockerfile": "Dockerfile"
     },
@@ -10,6 +10,10 @@
         "ghcr.io/devcontainers/features/python:1": {
             "version": "3.13"
         },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "20"
+        },
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/devcontainers/features/gcp-cli:1": {}
     },
     "customizations": {
@@ -23,5 +27,15 @@
         }
     },
     "postCreateCommand": "bash .devcontainer/setup.sh",
-    "remoteUser": "vscode"
+    "remoteUser": "vscode",
+    "mounts": [
+        "source=${localEnv:HOME}/.config/gcloud,target=/home/vscode/.config/gcloud,type=bind,consistency=cached"
+    ],
+    "containerEnv": {
+        "LOCATION": "us-central1"
+    },
+    "remoteEnv": {
+        "PROJECT_ID": "${localEnv:PROJECT_ID}",
+        "GENMEDIA_BUCKET": "${localEnv:GENMEDIA_BUCKET}"
+    }
 }
